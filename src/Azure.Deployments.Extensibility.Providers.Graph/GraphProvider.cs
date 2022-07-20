@@ -6,7 +6,6 @@ using Azure.Deployments.Extensibility.Core.Json;
 using Azure.Deployments.Extensibility.Core.Exceptions;
 using Azure.Deployments.Extensibility.Core.Validators;
 using Json.Pointer;
-using Microsoft.Graph;
 using System.Net;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -15,6 +14,7 @@ namespace Azure.Deployments.Extensibility.Providers.Graph
 {
     public class GraphProvider : IExtensibilityProvider
     {
+        public const string ProviderName = "Graph";
         private GraphHttpClient _graphHttpClient;
 
         public GraphProvider()
